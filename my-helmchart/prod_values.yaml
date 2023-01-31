@@ -1,0 +1,17 @@
+namespace: 
+  name: prod 
+
+deployment: 
+  replicas: 2
+  ports: 
+    containerPort: 8085
+  image: 
+    repo: musatee11/springboot
+    tag: latest
+
+service: 
+  type: NodePort
+  ports:
+    targetPort: 8085
+    port: 80 
+    

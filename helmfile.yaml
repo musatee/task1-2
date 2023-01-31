@@ -1,0 +1,8 @@
+releases: 
+- name: app-stack
+  chart: ./my-helmchart
+  needs: 
+  - prerequisite
+  
+- name: prerequisite
+  chart: ./dependant-chart
